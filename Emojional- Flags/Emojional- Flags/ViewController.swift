@@ -10,31 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var Pagetitle: UILabel!
-    
-    @IBOutlet weak var Text1: UITextField!
-    
-    @IBOutlet weak var Text2: UITextField!
-    
-    @IBOutlet weak var Text3: UITextField!
+   
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func Button1(_ sender: Any) {
-        if let newfile = Text1.text {
-            Pagetitle.text = newfile
-            
-        }
+
+    @IBAction func showMessage(sender: UIButton){
+        let alertController = UIAlertController(title:"Emojional Travel", message: "Expressions for Countries", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:nil))
+        present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func Button2(_ sender: Any) {
     }
     
-    @IBAction func Button3(_ sender: Any) {
-    }
-}
+    
 
